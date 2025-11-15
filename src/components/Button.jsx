@@ -1,28 +1,30 @@
-import React from 'react';
-import './Button.css';
+import React from "react";
+import "./Button.css";
 
-const Button = ({ 
-  children, 
-  variant = 'primary', 
-  size = 'medium', 
-  disabled = false, 
-  onClick, 
-  type = 'button',
-  className = '',
-  ...props 
+const Button = ({
+  children,
+  variant = "primary",
+  size = "medium",
+  disabled = false,
+  onClick,
+  type = "button",
+  className = "",
+  ...props
 }) => {
-  const baseClass = 'btn';
+  const baseClass = "btn";
   const variantClass = `btn--${variant}`;
   const sizeClass = `btn--${size}`;
-  const disabledClass = disabled ? 'btn--disabled' : '';
-  
+  const disabledClass = disabled ? "btn--disabled" : "";
+
   const buttonClasses = [
     baseClass,
     variantClass,
     sizeClass,
     disabledClass,
-    className
-  ].filter(Boolean).join(' ');
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <button
